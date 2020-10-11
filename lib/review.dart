@@ -12,7 +12,7 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     final userComment = Container(
       margin: EdgeInsets.only(left: 20.0),
-      child: Text(details,
+      child: Text(comments,
           textAlign: TextAlign.left,
           style: TextStyle(
               fontFamily: "Lato", fontSize: 13.0, fontWeight: FontWeight.w900)),

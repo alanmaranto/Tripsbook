@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:trips/review.dart';
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,12 +43,16 @@ like Aldus PageMaker including versions of Lorem Ipsum.""";
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("Hola mundo"),
-          ),
-          body: new DescriptionPlace("Cuba", 4, descriptionDummy),
-        ) //MyHomePage(title: 'Flutter Demo Home Page'),
-        );
+          body: Stack(children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Cuba", 4, descriptionDummy),
+                ReviewList()
+              ],
+            ),
+            GradientBack()
+          ]),
+        ));
   }
 }
 
