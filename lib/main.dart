@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:trips/review.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(MyApp());
 }
 
@@ -50,7 +54,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.""";
                 ReviewList()
               ],
             ),
-            GradientBack()
+            GradientBack('Popular')
           ]),
         ));
   }
